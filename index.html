@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/index.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+
+  <main class="wrapper">
+    <div class="main__bg">
+      <picture class="bg">
+        <source media="(max-width:1150px)" srcset="images/bg-main-mobile.png">
+        <img src="images/bg-main-desktop.png" alt="">
+      </picture>
+      <div class="cards">
+        <div class="front__card">
+          <img src="images/card-logo.svg" alt="">
+          <div class="card__infos">
+            <p class="card__number">
+              0000 0000 0000 0000
+            </p>
+            <div class="card__dateOwner">
+              <p class="card__owner">Jane Appleseed</p>
+              <p class="card__date">00/00</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="back__card">
+          <img src="images/bg-card-back.png" alt="">
+          <p class="cvv">000</p>
+        </div> 
+      </div>
+    </div>
+    
+    <div class="inputs">
+
+
+      <form action="">
+        <div class="form__wrapper">
+          <div>
+            <label for="owner">Cardholder Name</label>
+            <input type="text" id="owner" name="owner" placeholder="e.g. Jane Appleseed" required>
+          </div>
+          <div>
+            <label for="ownerNumber">Card Number</label>
+            <input type="text" id="ownerNumber" name="ownerNumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="16" required>
+            <p class="ownerNumber_Error">Wrong format, numbers only</p>
+          </div>
+  
+          <div class="exp_cvc"> 
+            <div class="exp">
+              <label for="exp">Exp. Date (MM/YY)</label>
+              <div class="double_inputs">
+                <input type="text" id="exp" name="MM" placeholder="MM" maxlength="2" required>
+                <input type="text" placeholder="YY" name="YY" maxlength="2" required>
+              </div>
+              <p class="exp_Error">can't be blank</p>
+            </div>
+            <div class="cvc">
+              <label for="CVC">CVC</label>
+              <input type="text" placeholder="e.g. 123" name="CVC" id="CVC" maxlength="3" required>
+              <p class="cvc_Error">can't be blank</p>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit">Confirm</button>
+      </form>
+
+
+    </div>
+
+  </main>
+
+  <script src="script/index.js"></script>
+</body>
+</html>

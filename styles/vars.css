@@ -1,0 +1,91 @@
+:root{
+    --Linear-gradient-active_input_border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --Red-input_errors: hsl(0, 100%, 66%);
+
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+
+    font-size: 18px;
+}
+
+/* card visuals */
+
+.front__card{
+  background: url(../images/bg-card-front.png) no-repeat center;  
+  background-size: cover;
+  border-radius: .6rem;
+
+  padding-inline: 2rem  ;
+  padding-block: 1rem;
+  width: fit-content;
+
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  gap: 3.5rem;
+
+  color: white;
+
+  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.101);
+}
+
+.card__number{
+    font-size: 1.4rem;
+    letter-spacing: 3.42px;
+    line-height: 2rem;
+
+    padding-inline-end: 1rem;
+    margin-block-end: 1rem;
+}
+.card__dateOwner{
+    display: flex;
+    justify-content: space-between;
+}
+.card__dateOwner>p{
+    font-size: .8rem;
+    line-height: 1.2rem;
+}
+
+.back__card{
+    width: fit-content; 
+    border-radius: .6rem;
+
+    color: white;
+    background-color: transparent;
+
+    position: relative;
+
+    margin-inline-start: 5rem;
+
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.101);
+}
+.back__card>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.cvv{
+    position: absolute;
+    inset-inline-end: 2.8rem;
+    inset-block-start: 6.3rem;
+}
+
+@media (min-width:1150PX) {
+    .back__card{
+        max-width: fit-content; 
+        border-radius: .6rem;
+    
+        color: white;
+        background-color: transparent;
+    
+        position: relative;
+    
+        box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.101);
+    }
+    .back__card>img{
+        height: 100%;
+        object-fit: cover;
+    }
+}
